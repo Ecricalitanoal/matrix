@@ -1,0 +1,6 @@
+﻿  Functions.cpp
+C:\Users\danil\source\repos\matrixxx\matrixxx\Functions.cpp(16,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  matrixxx.cpp
+  Создание кода...
+C:\Users\danil\source\repos\matrixxx\matrixxx\Functions.cpp(112): warning C4715: multip: значение возвращается не при всех путях выполнения
+  matrixxx.vcxproj -> C:\Users\danil\source\repos\matrixxx\x64\Debug\matrixxx.exe

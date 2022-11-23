@@ -24,6 +24,7 @@
     <ProjectGuid>{697771d4-840c-4ddf-9709-9ae53400e319}</ProjectGuid>
     <RootNamespace>matrixxx</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>MatrixFunc</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -127,7 +128,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="matrixxx.cpp" />
+    <ClCompile Include="Functions.cpp" />
+    <ClCompile Include="MatrixFunc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Matrix.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
