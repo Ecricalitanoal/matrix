@@ -1,6 +1,7 @@
-﻿  Functions.cpp
-C:\Users\danil\source\repos\matrixxx\matrixxx\Functions.cpp(16,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  matrixxx.cpp
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (matrixxx.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  Functions.cpp
+  MatrixFunc.cpp
+C:\Users\danil\source\repos\matrixxx\matrixxx\MatrixFunc.cpp(7,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   Создание кода...
-C:\Users\danil\source\repos\matrixxx\matrixxx\Functions.cpp(112): warning C4715: multip: значение возвращается не при всех путях выполнения
-  matrixxx.vcxproj -> C:\Users\danil\source\repos\matrixxx\x64\Debug\matrixxx.exe
+C:\Users\danil\source\repos\matrixxx\matrixxx\Functions.cpp(103): warning C4715: multip: значение возвращается не при всех путях выполнения
+  matrixxx.vcxproj -> C:\Users\danil\source\repos\matrixxx\x64\Debug\MatrixFunc.exe

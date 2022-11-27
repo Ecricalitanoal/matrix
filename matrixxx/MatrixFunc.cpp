@@ -4,16 +4,14 @@
 int main()
 {
     setlocale(0, "");
+    srand(time(0));
     bool flagSwitcher = true;
     char op;
     int sizeF1, sizeF2, sizeS1, sizeS2, counterOfUser = 0, counterOfExcp = 0;
     int** matrixFirst, ** matrixSecond, ** matrixResult;
-    std::cout << "Введите размеры первой матрицы: " << '\n';
-    std::cin >> sizeF1 >> sizeF2;
-    std::cout << "Введите размеры второй матрицы: " << '\n';
-    std::cin >> sizeS1 >> sizeS2;
-    matrixFirst = size(sizeF1, sizeF2);
-    matrixSecond = size(sizeS1, sizeS2);
+    size(sizeF1, sizeF2, sizeS1, sizeS2);
+    matrixFirst = init(sizeF1, sizeF2);
+    matrixSecond = init(sizeS1, sizeS2);
     matrixResult = new int*[sizeF2];
     while (flagSwitcher)
     {
@@ -25,7 +23,8 @@ int main()
         case '1':
         {
             counterOfUser++;
-            filling(matrixFirst, matrixSecond, sizeF1, sizeF2, sizeS1, sizeS2);
+            filling(matrixFirst, sizeF1, sizeF2);
+            filling(matrixSecond, sizeS1, sizeS2);
             break;
         }
         case '2':
@@ -34,7 +33,7 @@ int main()
             {
                 wMatrix(matrixFirst, matrixSecond, sizeF1, sizeF2, sizeS1, sizeS2, matrixResult, counterOfExcp);
             }
-            else std::cout << "Сначала заполните матрицы\n";
+            else wErr();
             break;
         }
         case '3':
@@ -46,16 +45,16 @@ int main()
                 }
                 else std::cout << "Матрицы должны быть одного размера\n";
             }
-            else std::cout << "Сначала заполните матрицы\n";
+            else wErr();
             break;
         }
         case '4':
         {
-            if (counterOfUser != 0) 
+            if (counterOfUser != 0)
             {
                 matrixResult = multip(matrixFirst, matrixSecond, sizeF1, sizeF2, sizeS1, sizeS2, counterOfExcp);
             }
-            else std::cout << "Сначала заполните матрицы\n";
+            else wErr();
             break;
         }
         default: continue;

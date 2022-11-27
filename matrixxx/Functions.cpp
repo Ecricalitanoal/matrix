@@ -1,7 +1,7 @@
 #include "Matrix.h"
 #include <iostream>
 #include <ctime>
-int** size(int size1, int size2)
+int** init(int size1, int size2)
 {
 	int **matrix = new int* [size1];
 	for (int i = 0; i < size1; i++)
@@ -11,24 +11,15 @@ int** size(int size1, int size2)
 	return matrix;
 }
 
-void filling(int** matrix1, int** matrix2, int s11, int s12, int s21, int s22)
+void filling(int** &matrix, int s1, int s2)
 {
-    srand(time(0));
     int random;
-    for (int i = 0; i < s11; i++)
+    for (int i = 0; i < s1; i++)
     {
-        for (int j = 0; j < s12; j++)
+        for (int j = 0; j < s2; j++)
         {
             random = rand() % 10 + 1;
-            matrix1[i][j] = random;
-        }
-    }
-    for (int i = 0; i < s21; i++)
-    {
-        for (int j = 0; j < s22; j++)
-        {
-            random = rand() % 10 + 1;
-            matrix2[i][j] = random;
+            matrix[i][j] = random;
         }
     }
 }
@@ -118,4 +109,15 @@ void writer()
     std::cout << "¬ведите 3 дл€ сложени€ матриц:" << '\n';
     std::cout << "¬ведите 4 дл€ умножени€ матриц:" << '\n';
     std::cout << "¬ведите 0 дл€ завершени€ программы:" << '\n';
+}
+void size(int& x1, int& x2, int& x3, int& x4)
+{
+    std::cout << "¬ведите размеры первой матрицы: " << '\n';
+    std::cin >> x1 >> x2;
+    std::cout << "¬ведите размеры второй матрицы: " << '\n';
+    std::cin >> x3 >> x4;
+}
+void wErr()
+{
+    std::cout << "—начала заполните матрицы\n";
 }
